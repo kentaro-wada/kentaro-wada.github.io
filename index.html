@@ -18,8 +18,21 @@
 
 <body>
     <h1>こんにちは</h1>
+
     <button class="bottun-1">ボタン1</button>
-    <input type="submit">submit</input>
+    <form id="sampleForm">
+        <input type="text" name="username" placeholder="ユーザー名">
+        <input type="submit" value="送信">
+    </form>
+
+
+    <script>
+    document.getElementById('sampleForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // デフォルトの送信をキャンセル
+        alert('フォームが送信されました');
+        // ここでfetchやXMLHttpRequestでサーバーに送信も可能
+    });
+    </script>
 </body>
 
 </html>
