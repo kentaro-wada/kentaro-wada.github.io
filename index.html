@@ -13,15 +13,15 @@
     })(window,document,'script','dataLayer','GTM-5GQXKLGD');</script>
     <!-- End Google Tag Manager -->
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js)
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GP1PDRLYYN"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-GP1PDRLYYN', { 'debug_mode':true });
-    </script>
+    gtag('config', 'G-GP1PDRLYYN', { 'debug_mode':true }); -->
+    <!-- </script> -->
 </head>
 
 <body>
@@ -31,21 +31,12 @@
     <!-- End Google Tag Manager (noscript) -->
     <h1>こんにちは</h1>
 
-    <button class="bottun-1" onclick='gtag("event", "click_button", { link_text: "お申し込みはこちら", link_url: "https://hogehoge.jp/"})'>ボタン1</button>
-    <button class="bottun-1">ボタン2</button>
+    <button class="button-1">ボタン1</button>
+    <button class="button-1">ボタン2</button>
     <form id="sampleForm">
         <input type="text" name="username" placeholder="ユーザー名">
         <input type="submit" value="送信">
     </form>
-
-
-    <script>
-    document.getElementById('sampleForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // デフォルトの送信をキャンセル
-        alert('フォームが送信されました');
-        // ここでfetchやXMLHttpRequestでサーバーに送信も可能
-    });
-    </script>
 </body>
 
 </html>
