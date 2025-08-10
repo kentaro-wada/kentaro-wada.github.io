@@ -3,7 +3,7 @@
 - イベントに対しそれに紐ずくプロパティに具体的な値がセットされる
 
 
-# 初期設定
+# GA4初期設定
 各ファイル内のheadタグ内に以下のようなコードを埋め込む
 ```
 <!-- Google tag (gtag.js) -->
@@ -27,4 +27,29 @@
 ```
 <button class="bottun-1" onclick='gtag("event", "click_button", { link_text: "お申し込みはこちら", link_url: "https://hogehoge.jp/"})'>ボタン1</button>
 ```
-2. GTMでカスタムイベントを設定
+このように各イベント発火時の処理にgtagの処理を組み込めば、GA4にそのイベントは送信される
+ただ探索レポートで確認するためには、GA4管理画面で、そのカスタムイベントを定義する必要ある
+
+
+GA4を設定すると、GTAGも自動で紐づく？ただあくまでGA4向けの最低限の設定？
+
+# GTAG  初期設定
+1. このコードは、次のようにページの <head> 内のなるべく上のほうに貼り付けてください。
+```
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5GQXKLGD');</script>
+<!-- End Google Tag Manager -->
+```
+2. 開始タグ <body> の直後にこのコードを次のように貼り付けてください。
+```
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5GQXKLGD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+```
+
+このとき、GA4へ連携するとき、同じイベントが複数計測される？
