@@ -24,5 +24,7 @@
 
 このほか、カスタムイベントを設定することでボタン押下時のクリックイベントなどを収集できる
 1. GA4でカスタムイベントを設定
-
+```
+<button class="bottun-1" onclick='gtag("event", "click_button", { link_text: "お申し込みはこちら", link_url: "https://hogehoge.jp/"})'>ボタン1</button>
+```
 2. GTMでカスタムイベントを設定
