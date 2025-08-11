@@ -115,6 +115,7 @@ router.afterEach((to) => {
 　考慮して個別でイベントを送信するようにした場合、上記デフォルト設定は二重計測の観点から外しておく必要がある。
 　
 　なお個人的な意見として、あくまでGTMはソースにタグを埋め込むことなく計測できるようにするためのものなので、アプリソースに以下のように記述することが得策とはあまり思えない。
+  ref: https://marketingblog.mynavi.jp/marketing/spa-ga-measurement/
 　
 #### 例：VueやReactなど
 
