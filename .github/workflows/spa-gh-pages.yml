@@ -28,12 +28,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd my-vue-spa
+          cd vue-project
           npm ci
 
       - name: Build
         run: |
-          cd my-vue-spa
+          cd vue-project
           npm run build
 
       - name: Setup Pages
